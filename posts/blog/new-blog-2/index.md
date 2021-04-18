@@ -1,6 +1,6 @@
 ---
-title: new blog 2
+title: new en blog post
 date: 2021-04-18T16:19:52.758Z
-description: new blog 2
+description: new en blog post
 ---
-new blog 2
+new en blog post
