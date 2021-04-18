@@ -7,8 +7,8 @@ public_folder: /img
 
 collections:
   - name: 'blog'
-    label: 'Blog1'
-    folder: 'content/blog'
+    label: 'Blog'
+    folder: 'posts/blog'
     create: true
     slug: 'index'
     media_folder: ''
@@ -21,3 +21,30 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+#Blog-Post EN       
+  - name: "blogEn"
+    label: "Blog (en)"
+    folder: 'posts/en/blog'
+    filter: { field: contentType, value: blog }
+    create: true
+    slug: "{{slug}}"
+    identifier_field: slug
+    fields:
+      - {label: Template Key, name: templateKey, widget: hidden, default: templates/blog-post}
+      - {label: Slug, name: slug, widget: string}
+      - {label: Language, name: language, widget: hidden, default: en }
+      - {label: Content Type, name: contentType, widget: hidden, default: blog} 
+
+  #Blog-Post DE       
+  - name: "blogJp"
+    label: "Blog (jp)"
+    folder: 'posts/jp/blog'
+    filter: { field: contentType, value: blog }
+    create: true
+    slug: "{{slug}}"
+    identifier_field: slug
+    fields:
+      - {label: Template Key, name: templateKey, widget: hidden, default: templates/blog-post}
+      - {label: Slug, name: slug, widget: string}
+      - {label: Language, name: language, widget: hidden, default: de }
+      - {label: Content Type, name: contentType, widget: hidden, default: blog}

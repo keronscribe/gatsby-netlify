@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import styled from "styled-components"
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -8,9 +9,9 @@ const Layout = ({ location, title, children }) => {
 
   if (isRootPath) {
     header = (
-      <h1 className="main-heading">
+      <MainHeading>
         <Link to="/">{title}</Link>
-      </h1>
+      </MainHeading>
     )
   } else {
     header = (
@@ -34,3 +35,8 @@ const Layout = ({ location, title, children }) => {
 }
 
 export default Layout
+
+const MainHeading = styled.h1`
+margin: 10;
+border: 2px solid red;
+`
